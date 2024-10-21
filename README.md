@@ -14,8 +14,6 @@ The project is deployed on Vercel and can be accessed at the following link:
 
 ### [Link to Live Demo](http://foodsecurity.s3-website.eu-north-1.amazonaws.com/)
 
-> **Note:** First start its slow due to high map data.
-
 ## Figma Design
 
 A Figma design was created to visualize the user interface and flow of the project. This design demonstrates how the user interacts with the map-based interface and explores the food security metrics visually.
