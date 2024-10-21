@@ -10,7 +10,7 @@ Additionally, I designed a **Figma prototype** to outline the user interface and
 
 ## Live Demo on AWS S3 bucket
 
-The project is deployed on Vercel and can be accessed at the following link:
+The project is deployed on AWS S3 bucket and can be accessed at the following link:
 
 ### [Link to Live Demo](http://foodsecurity.s3-website.eu-north-1.amazonaws.com/)
 
