@@ -8,11 +8,14 @@ import { centroid } from "@turf/turf"
 import { africa_iso_a3 } from "../../utils/staticVariables"
 import CountryInfo from "../country-info/CountryInfo"
 import { CountriesShape } from "../../interfaces/CountriesShape.interface"
+import { useResponsiveZoom } from "../../utils/hooks/useResponsiveZoom"
+import "./mapDisplay.css"
 
 const mapboxAccessToken: String | undefined = import.meta.env.VITE_MapBoxToken
 
 const MapDisplay = () => {
   const [filteredShapeData, setFilteredShapeData] = useState(null as any)
+  const responsiveZoom = useResponsiveZoom()
 
   const getCountryData = (iso3: string) => {
     return iso3 ? (
@@ -52,11 +55,11 @@ const MapDisplay = () => {
 
   return (
     <MapContainer
+      className="map-container"
       center={[0, 20]}
-      zoom={4}
-      maxZoom={10}
-      style={{ height: "100vh", width: "100vw" }}
-      worldCopyJump={false}
+      zoom={responsiveZoom}
+      maxZoom={8}
+      worldCopyJump={true}
     >
       <TileLayer
         url={`https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=${mapboxAccessToken}`}
