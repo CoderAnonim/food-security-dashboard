@@ -3,9 +3,8 @@ import { MapContainer, TileLayer, Marker, Popup, GeoJSON } from "react-leaflet"
 import { Feature } from "geojson"
 import { Icon } from "leaflet"
 import "leaflet/dist/leaflet.css"
-import countriesShape from "../../assets/countries.json"
+import AfricaShape from "../../assets/africa_countries.json"
 import { centroid } from "@turf/turf"
-import { africa_iso_a3 } from "../../utils/staticVariables"
 import CountryInfo from "../country-info/CountryInfo"
 import { CountriesShape } from "../../interfaces/CountriesShape.interface"
 import { useResponsiveZoom } from "../../utils/hooks/useResponsiveZoom"
@@ -28,14 +27,12 @@ const MapDisplay = () => {
 
   // Filter out features where geometry is null and only add the countries from African continent
   useEffect(() => {
-    const validFeatures = (countriesShape as CountriesShape).features.filter(
-      (feature: any) =>
-        feature.geometry !== null &&
-        africa_iso_a3.includes(feature.properties.ISO_A3)
+    const validFeatures = (AfricaShape as CountriesShape).features.filter(
+      (feature: any) => feature.geometry !== null
     )
 
     setFilteredShapeData({
-      ...countriesShape,
+      ...AfricaShape,
       features: validFeatures,
     })
   }, [])

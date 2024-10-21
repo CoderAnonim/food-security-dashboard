@@ -22,6 +22,8 @@ A Figma design was created to visualize the user interface and flow of the proje
 
 ### [Link to Figma Design](<https://www.figma.com/design/uto2dXzb4rnmiP3yfS3nKr/SVG-World-Map-(Community)?m=auto&is-community-duplicate=1&fuid=875051776690994702>)
 
+> **Note:** This is the first design isn't interactable, its just an idea how it can be, of course its subject to change.
+
 ---
 
 ## Features
