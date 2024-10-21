@@ -11,7 +11,8 @@ import { CountriesShape } from "../../interfaces/CountriesShape.interface"
 import { useResponsiveZoom } from "../../utils/hooks/useResponsiveZoom"
 import "./mapDisplay.css"
 
-const mapboxAccessToken: String | undefined = import.meta.env.VITE_MapBoxToken
+const mapboxAccessToken: String =
+  "pk.eyJ1Ijoiam9rZXIyOTg4IiwiYSI6ImNtMmc1aXlybjBpMGgyanBmNHVtbzdmYnUifQ.OFmhsJBmTyE27Uovymh9jA"
 
 const MapDisplay = () => {
   const [filteredShapeData, setFilteredShapeData] = useState(null as any)
